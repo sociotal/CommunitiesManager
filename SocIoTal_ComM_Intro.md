@@ -1,17 +1,17 @@
-SocIoTal Communities Manager Introduction
+#SocIoTal Communities Manager Introduction
 
 A SocIoTal Community provides a closed environment where only registered users and entities can share information: registered resources/entities will publish data that only registered users will be able to read. The original idea refers to a SocIoTal Community, created and managed by a SocIoTal user, as a group of users and resources with a common objective or inquisitiveness. A role set definition will decide who can do what within the community.
 
 This introduction describes the SocIoTal Communities Manager tool and its functioning, including the creation, operation and exploitation of communities within the SocIoTal framework. Updated and detailed examples of the methods here pointed are available in [*SocIoTal WiKi*](https://github.com/sociotal/SOCIOTAL/wiki/SocIoTal-Communities-Manager).
 
-SocIoTal Community definition
+##SocIoTal Community definition
 -----------------------------
 
 The concept of the SocIoTal Community is based on the types of relationships among smart objects and users. In this case, the usual driver of communities is the common interest relationship, putting together users and information related to a similar target or application. This way, SocIoTal defines a community as a secure cooperation between different producer users, making entities (devices, services, events, resources etc.) available to selected consumer users (community members), to achieving a common objective.
 
 Although an ad-hoc community creation mechanism is also possible in the SocIoTal Integrated Platform ([*platform.sociotal.eu*](platform.sociotal.eu)), the project provides a platform-based communities structure, established between users and entities connected to the same infrastructure network. This structure, built in SocIoTal Integrated Platform, provides centralized services to SocIoTal users, as creation and definition of communities, registering and management of users, roles management and so on.
 
-SocIoTal Communities Manager 
+##SocIoTal Communities Manager 
 -----------------------------
 
 Within the SocIoTal framework, the Communities Manager is the element that provides the Communities creation and management mechanisms and directly links with the Identity Management and Context Management services. SocIoTal’s Communities Manager offers a centralized point to create SocIoTal Communities for registered users to, in turn, register entities and share them. SocIoTal Communities, therefore, provides a way for interested user to share interesting data and/or to access interesting resources whilst SocIoTal Communities Manager implements the mechanisms to create and manage these communities.
