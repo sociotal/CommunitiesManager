@@ -30,9 +30,9 @@ The Communities Manager provides mechanisms to register users, manage communitie
 
 The current implementation of SocIoTal Communities Manager in Figure below relies on FIWARE Identity Management Generic Enabler available implementation, the KeyRock. An instance of the Keyrock (Version 4.4.1) is also provided by the SocIoTal IdM so, user management will be implemented using SocIoTal IdM whilst the rest of communities’ management functionalities will directly use this SocIoTal Keyrock instance. This way, integration issues are addressed, guaranteeing the same set of users and identities (the same user’s directory) for the whole set of SocIoTal components and compatible identification/authentication mechanisms.
 
-| <img src="./media/image1.png" width="520" height="358" />                                                                     |
+| <img src="https://github.com/IEMaestro/CommunitiesManager/blob/master/documentation/ComM_Integration.png" width="850" height="600" />                                                                     |
 |-------------------------------------------------------------------------------------------------------------------------------|
-| <span id="_Ref444606420" class="anchor"><span id="_Toc445736928" class="anchor"></span></span>Communities Manager integration |
+| <span id="_Ref444606420" class="anchor"><span id="_Toc445736928" class="anchor"></span></span>1. Communities Manager integration |
 
 From the point of view of the user (either developer or final user), SocIoTal Communities Manager provides a HTTP/HTTPS RESTful API divided into three main set of methods:
 
@@ -56,9 +56,9 @@ According to what has been mentioned, SocIoTal Communities Manager requires an o
 
 The IP addresses and ports of these required instances can be given through the corresponding configuration file of the Communities Manager. Its northbound offers to users a RESTful API to manage user identities and communities, as well as to query, retrieve and validate Community Tokens, further used to integrate with other SocIoTal platform components. Current working SocIoTal Communities Manager version supports FIWARE KeyRock IdM versions 4.3, 4.4 and 5.
 
-| <embed src="./media/image2.emf" width="544" height="340" /> |
+| <img src="https://github.com/IEMaestro/CommunitiesManager/blob/master/documentation/ComM_Implementation.png" width="800" height="500" /> |
 |-------------------------------------------------------------|
-| Communities Manager Updated implementation                  |
+|2. Communities Manager Updated implementation                  |
 
 SocIoTal Communities Manager building blocks, methods and functionalities have been developed using Eclipse IDE for Java Developers (Indigo version). It utilised Java SE Development Kit 7 from OpenJDK (java-1.7.0-openjdk) and Open Java runtime 7 (openjdk-7-jre) to develop and run the resulting Java code, including the RESTEasy JAX-RS implementation libraries provided by JBoss to build RESTful Web Services and RESTful Java applications. For the prototype version, SocIoTal Communities Manager methods and APIs are distributed as a web application archive (WAR) to be deployed within a Web Application Server. For the instances involved in the different tests performed so far, JBoss AS 7.1 has been selected. Figure 9 details the updated implementation.
 
@@ -72,9 +72,9 @@ Integration with SocIoTal IdM is embedded within the Communities Manager through
 
 The Community-Token will be the key to identify the user, the role and the community membership, and therefore, the key to enable community management within SocIoTal integrated platform. SocIoTal Community-Tokens are based on Keyrock/Keystone UUID authentication tokens that provide authentication mechanisms as well as validation and information related to projects, domains and roles the authenticated identity has or belongs to. Figure 10 shows how tokens are created by Keystone/Keyrock and later used by the client to “sign” every subsequent API request.
 
-| <img src="./media/image3.png" width="540" height="513" /> |
+| <img src="https://github.com/IEMaestro/CommunitiesManager/blob/master/documentation/Token_Gen.png" width="850" height="900" /> |
 |-----------------------------------------------------------|
-| Community-Token request/validation flow                   |
+| 3. Community-Token request/validation flow                   |
 
 Based on supplied username/password plus domain and community (if specified), SocIoTal Communities Manager would:
 
@@ -92,15 +92,16 @@ Based on supplied username/password plus domain and community (if specified), So
 
     -   The Community-Token UUID should be passed along with each API call by the client, integrated with the Communities Manager.
 
-| {                                                    
+ ```json
+ {                                                    
                                                        
  "values": {                                           
                                                        
  "token": {                                            
                                                        
- "methods": \["password"\],                            
+ "methods": ["password"],                            
                                                        
- "issued\_at": "2016-02-04T16:00:11.676055Z",          
+ "issued_at": "2016-02-04T16:00:11.676055Z",          
                                                        
  "community": {                                        
                                                        
@@ -118,17 +119,17 @@ Based on supplied username/password plus domain and community (if specified), So
                                                        
  },                                                    
                                                        
- "expires\_at": "2016-02-04T17:00:11.676023Z",         
+ "expires_at": "2016-02-04T17:00:11.676023Z",         
                                                        
- "audit\_ids": \["OcEtiNIYTliS1zJ60NrsPQ"\],           
+ "audit_ids": ["OcEtiNIYTliS1zJ60NrsPQ"],           
                                                        
- "roles": \[{                                          
+ "roles": [{                                          
                                                        
  "id": "ff0422fda2cf4c0c89e5b9260ec79a45",             
                                                        
  "name": "owner"                                       
                                                        
- }\],                                                  
+ }],                                                  
                                                        
  "user": {                                             
                                                        
@@ -152,9 +153,10 @@ Based on supplied username/password plus domain and community (if specified), So
                                                        
  "communityToken": "e054d935c5584fdda866ab420d48447b"  
                                                        
- }                                                     |
-|------------------------------------------------------|
-| JSON format Community-Token example                  |
+ }    
+ ```
+
+```JSON format Community-Token example```
 
 Once a Community-Token is obtained and it’s corresponding UUID is added to a request, the corresponding API endpoint (e.g. the SocIoTal Context Manager), in order to validate this token:
 
