@@ -93,67 +93,37 @@ Based on supplied username/password plus domain and community (if specified), So
     -   The Community-Token UUID should be passed along with each API call by the client, integrated with the Communities Manager.
 
  ```json
- {                                                    
-                                                       
- "values": {                                           
-                                                       
- "token": {                                            
-                                                       
- "methods": ["password"],                            
-                                                       
- "issued_at": "2016-02-04T16:00:11.676055Z",          
-                                                       
- "community": {                                        
-                                                       
- "id": "206fa9c0e1f344758d240099f2cb78d7",             
-                                                       
- "name": "6ee840f1-601c-4bda-bc28-cb3ef9b9812a",       
-                                                       
- "domain": {                                           
-                                                       
- "id": "c43a3df1e0f74480b38158b09ebf0b56",             
-                                                       
- "name": "SocIoTal"                                    
-                                                       
- }                                                     
-                                                       
- },                                                    
-                                                       
- "expires_at": "2016-02-04T17:00:11.676023Z",         
-                                                       
- "audit_ids": ["OcEtiNIYTliS1zJ60NrsPQ"],           
-                                                       
- "roles": [{                                          
-                                                       
- "id": "ff0422fda2cf4c0c89e5b9260ec79a45",             
-                                                       
- "name": "owner"                                       
-                                                       
- }],                                                  
-                                                       
- "user": {                                             
-                                                       
- "id": "6ee840f1-601c-4bda-bc28-cb3ef9b9812a",         
-                                                       
- "name": "user1",                                      
-                                                       
- "domain": {                                           
-                                                       
- "id": "c43a3df1e0f74480b38158b09ebf0b56",             
-                                                       
- "name": "SocIoTal"                                    
-                                                       
- }                                                     
-                                                       
- }                                                     
-                                                       
- }                                                     
-                                                       
- },                                                    
-                                                       
- "communityToken": "e054d935c5584fdda866ab420d48447b"  
-                                                       
- }    
+{
+	"values": {
+		"token": {
+			"methods": ["password"],
+			"issued_at": "2016-02-04T16:00:11.676055Z",
+			"community": {
+				"id": "206fa9c0e1f344758d240099f2cb78d7",
+				"name": "6ee840f1-601c-4bda-bc28-cb3ef9b9812a",
+				"domain": {
+					"id": "c43a3df1e0f74480b38158b09ebf0b56",
+					"name": "SocIoTal"
+				}
+			},
+			"expires_at": "2016-02-04T17:00:11.676023Z",
+			"audit_ids": ["OcEtiNIYTliS1zJ60NrsPQ"],
+			"roles": [{
+				"id": "ff0422fda2cf4c0c89e5b9260ec79a45",
+				"name": "owner"
+			}],
+			"user": {
+				"id": "6ee840f1-601c-4bda-bc28-cb3ef9b9812a",
+				"name": "user1",
+				"domain": {
+					"id": "c43a3df1e0f74480b38158b09ebf0b56",
+					"name": "SocIoTal"
+				}
+			}
+		}
+	},
+	"communityToken": "e054d935c5584fdda866ab420d48447b"
+  
  ```
 
 ```JSON format Community-Token example```
