@@ -123,10 +123,12 @@ Based on supplied username/password plus domain and community (if specified), So
 		}
 	},
 	"communityToken": "e054d935c5584fdda866ab420d48447b"
-  
- ```
+}
+```
 
-```JSON format Community-Token example```
+```
+JSON format Community-Token example
+```
 
 Once a Community-Token is obtained and it’s corresponding UUID is added to a request, the corresponding API endpoint (e.g. the SocIoTal Context Manager), in order to validate this token:
 
