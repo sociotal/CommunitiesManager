@@ -1,2 +1,0 @@
-# CommunitiesManager
-Communities manager
